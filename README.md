@@ -30,10 +30,9 @@ playwright install chromium
 ```
 4. Install External Dependencies:
 For full reconnaissance capabilities, ensure the following Go tools are installed and in your system's PATH:
+
 gau => https://github.com/lc/gau
-
 subfinder => https://github.com/projectdiscovery/subfinder
-
 amass => https://github.com/owasp-amass/amass
 
 

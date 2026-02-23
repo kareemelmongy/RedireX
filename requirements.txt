@@ -1,0 +1,8 @@
+aiohttp
+httpx
+requests
+google-generativeai
+urllib3
+playwright
+tqdm
+colorama

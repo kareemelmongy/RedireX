@@ -1,0 +1,13 @@
+```text
+# Python
+__pycache__/
+*.py[cod]
+
+# RedireX Outputs
+*.log
+*.json
+report.txt
+results.txt
+
+# OS Files
+.DS_Store
